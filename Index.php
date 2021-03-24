@@ -19,7 +19,7 @@
     </head>
     <body class="container">
         <nav class="navbar navbar-expand-md navbar-light p-5 bg-info shadow">
-            <a class="navbar-brand" href="Index.php"> Home </a>
+            <a class="navbar-brand" href="Home.php"> Home </a>
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar">
                 <span class="navbar-toggler-icon"> </span>
             </button>
@@ -37,7 +37,7 @@
         <div class="table-responsive text-center p-5 bg-light shadow border">
             <?php require_once($_GET["Track"] != "Dashboard" ? "Orders.php" : "Dashboard.php"); ?>
             <footer class="my-5">
-                <a class="text-decoration-none" href="https://www.univ-paris8.fr"> Developed for Université Paris 8 </p>
+                <a class="text-decoration-none" href="https://github.com/azizbelkacemi96/IHM_PHP"> Notre Git </p>
             </footer>
         </div>
     </body>

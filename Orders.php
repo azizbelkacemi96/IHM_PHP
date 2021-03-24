@@ -9,7 +9,7 @@
             <th class="w-100"> Prix </th>
             <th class="w-100"> Date </th>
             <th class="w-100"> Status </th>
-            <th class="w-100"> Modifier </th>
+            <th class="w-100"> Details </th>
             <th class="w-100"> Supprimer </th>
         </tr>
     </thead>
@@ -22,10 +22,10 @@
                 <td class="w-20"> <?= $line["date"]; ?> </td>
                 <td class="w-20"> <?= getStatus($line["status"]["status"]); ?> </td>
                 <td>
-                    <button class="btn btn-outline-info w-100" onclick="window.location.replace('Index.php?Track=<?= $line["id"]; ?>')"> Track </button>
+                    <button class="btn btn-outline-info w-100" onclick="window.location.replace('Index.php?Track=<?= $line["id"]; ?>')"> voir détails </button>
                 </td>
                 <td>
-                    <button class="btn btn-outline-danger w-100" onclick="alert('Error')"> Delete </button>
+                    <button class="btn btn-outline-danger w-100" onclick="alert('Error')"> Sup </button>
                 </td>
             </tr>
         <?php } ?>
@@ -34,19 +34,16 @@
 <?php if($track > 0 && $track <= sizeof($orders)) { ?>
     <div class="d-flex flex-column flex-md-row justify-content-around my-5">
         <p class="p-5 text-center bg-<?= getColor($orders[$track - 1]["status"]["status"], 0); ?> shadow border rounded-circle">
-            Management
+           RECUS
             <br/>
-            <?= $line["status"]["management"]; ?>
         </p>
         <p class="p-5 text-center bg-<?= getColor($orders[$track - 1]["status"]["status"], 1); ?> shadow border rounded-circle">
-            Purchasing
+            EN COURS
             <br/>
-            <?= $line["status"]["purchasing"]; ?>
         </p>
         <p class="p-5 text-center bg-<?= getColor($orders[$track - 1]["status"]["status"], 2); ?> shadow border rounded-circle">
-            Budget
+            LIVRE
             <br/>
-            <?= $line["status"]["budget"]; ?>
         </p>
     </div>
 <?php } ?>

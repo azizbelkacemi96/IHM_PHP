@@ -32,23 +32,16 @@
         return array("Google", "Apple", "Facebook", "Amazon", "Microsoft");
     }
 
-    function getRandomUser() {
-        $jobs = array("Director", "Developer", "Operatif", "Office", "Comptability");
-        $firsts = array("Joe", "Peter", "Cathy", "Tim", "Bill", "Patrick", "Julie", "Adam", "Paul", "Laura");
-        $lasts = array("Dupont", "Rugé", "Patri", "Chu", "Redo", "Miija", "Ranu", "Lousa", "Tuni", "Cra");
-
-        return $first[array_rand($firstss)] . $first[array_rand($firstss)] . " " . $lasts[array_rand($lasts)] . " <br/> " . getRandomDate();
-    }
 
     function getRandomDate() {
         return (rand() % 30 + 1) . "/" . (rand() % 12 + 1) . "/2020";
     }
 
     function getStatus($status) {
-        if($status == 0) return "Waiting for Management";
-        else if($status == 1) return "Waiting for Purchasing";
-        else if($status == 2) return "Waiting for Budget";
-        else return "Completed";
+        if($status == 0) return "En attente de reception";
+        else if($status == 1) return "En cours de traitement";
+        else if($status == 2) return "Traité";
+        else return "Livré";
     }
 
     function getColor($status, $id) {
